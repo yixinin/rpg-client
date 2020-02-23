@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="rpg.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:rpg"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid Width="200" Height="400" >
+            <ComboBox x:Name="wsItem" Header="选择WS地址" >
+                <ComboBoxItem Content="ws://10.0.0.23:8001"></ComboBoxItem>
+                <ComboBoxItem Content="ws://localhost:8001" IsSelected="True"></ComboBoxItem>
+                <ComboBoxItem Content="自定义"></ComboBoxItem>
+            </ComboBox>
+            <TextBox x:Name="wsHost" Margin="0,50,0,0"  VerticalAlignment="Top" Text="ws://10.0.0.23:8001" HorizontalAlignment="Left" Header="ws host:"></TextBox>
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" >
+                <Button x:Name="connect" Click="connect_Click" Content="Connect"></Button>
+                <Button x:Name="login" Click="login_Click" Content="Login" Margin="10,10"> </Button>
+                <Button x:Name="gameTypes" Click="gameTypes_Click" Content="游戏列表"></Button>
+            
+            </StackPanel>
+            
+        </Grid>
+        
+    </Grid>
+</Page>
